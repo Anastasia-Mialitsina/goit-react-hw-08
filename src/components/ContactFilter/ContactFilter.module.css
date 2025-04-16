@@ -1,0 +1,22 @@
+.input {
+  border-radius: 40px;
+  width: 667px;
+  cursor: pointer;
+  border: 2px solid #e85353;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 0 10px #eb0404, 0 0 20px #ff6b6b;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.input:focus,
+.input:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #eb0404, 0 0 25px #ff4d4d;
+}
+.container {
+  display: flex;
+  justify-content: center; /* по горизонтали */
+  align-items: center;     /* по вертикали */
+}

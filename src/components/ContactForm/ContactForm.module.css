@@ -1,0 +1,36 @@
+.input {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    width: 200px;
+    cursor: pointer;
+    border: 2px solid #e85353;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 0 10px #eb0404, 0 0 20px #ff6b6b;
+    transition: transform 0.3sease, border-color 0.3sease;
+}
+.btn {
+  margin-bottom: 30px;
+  color: #e85353;
+  border-radius: 40px;
+    width: 100px;
+    cursor: pointer;
+    border: 2px solid #e85353;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 0 10px #eb0404, 0 0 20px #ff6b6b;
+    transition: transform 0.3sease, border-color 0.3sease;
+}
+input::placeholder {
+  color: #e85353;
+}
+.div {
+ 
+  display: grid;
+  place-items: center;
+}
