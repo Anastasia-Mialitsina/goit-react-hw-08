@@ -1,6 +1,7 @@
+//src/components/AddContact.jsx
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsOps"; 
+import { addContact } from "../../redux/contacts/operations"; 
 
 const AddContact = () => {
   const [name, setName] = useState("");

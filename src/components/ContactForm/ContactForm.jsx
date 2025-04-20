@@ -1,18 +1,19 @@
+//src/components/ContactForm.jsx
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contactsOps";
-import style from './ContactForm.module.css';
+import style from "./ContactForm.module.css";
 
-  const ContactForm = () => {
+const ContactForm = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
-  const [number, setNumber] = useState(""); 
+  const [number, setNumber] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name || !number) return;
 
-    dispatch(addContact({ name, number })); 
+    dispatch(addContact({ name, number }));
 
     setName("");
     setNumber("");
@@ -36,7 +37,9 @@ import style from './ContactForm.module.css';
         onChange={(e) => setNumber(e.target.value)}
         required
       />
-      <button className={style.btn} type="submit">Add Contact</button>
+      <button className={style.btn} type="submit">
+        Add Contact
+      </button>
     </form>
   );
 };
