@@ -1,17 +1,17 @@
-//src/components/AuthNav.jsx
+// src/components/AuthNav.jsx
 import React from "react";
-import { Link } from "react-router-dom";
-import css from './AuthNav.module.css';
+import { NavLink } from "react-router-dom"; // исправлено
+import css from "./AuthNav.module.css";
 
 const AuthNav = () => {
   return (
     <nav className={css.authNav}>
-      <Link to="/register" className={css.link}>
+      <NavLink to="/register" className={css.link}>
         Register
-      </Link>
-      <Link to="/login" className={css.link}>
+      </NavLink>
+      <NavLink to="/login" className={css.link}>
         Log In
-      </Link>
+      </NavLink>
     </nav>
   );
 };

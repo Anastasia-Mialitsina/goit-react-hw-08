@@ -1,8 +1,6 @@
-//src/redux/contacts/operations.js
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
-const API_URL = "https://67ee68e1c11d5ff4bf797dd1.mockapi.io/contacts";
+import { API_URL } from "../auth/operations";
 
 export const addContact = createAsyncThunk(
   "contacts/addContact",
@@ -15,6 +13,7 @@ export const addContact = createAsyncThunk(
 export const fetchContacts = createAsyncThunk(
   "contacts/fetchContacts",
   async () => {
+    console.log(API_URL); 
     const response = await axios.get(API_URL);
     return response.data;
   }
@@ -27,4 +26,3 @@ export const deleteContact = createAsyncThunk(
     return id;
   }
 );
-
