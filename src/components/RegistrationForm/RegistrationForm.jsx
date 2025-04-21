@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
+import css from "./RegistrationForm.module.css";
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ const RegistrationForm = () => {
 
   const formik = useFormik({
     initialValues: {
-      name: "", // заменили с username на name
+      name: "", 
       email: "",
       password: "",
       confirmPassword: "",
@@ -43,10 +44,11 @@ const RegistrationForm = () => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form className={css.form} onSubmit={formik.handleSubmit}>
       <div>
-        <label>Name</label>
+        <label className={css.form}>Name</label>
         <input
+          className={css.input}
           type="text"
           name="name"
           value={formik.values.name}
@@ -58,8 +60,9 @@ const RegistrationForm = () => {
       </div>
 
       <div>
-        <label>Email</label>
+        <label className={css.form}>Email</label>
         <input
+          className={css.input}
           type="email"
           name="email"
           value={formik.values.email}
@@ -71,8 +74,9 @@ const RegistrationForm = () => {
       </div>
 
       <div>
-        <label>Password</label>
+        <label className={css.form}>Password</label>
         <input
+          className={css.input}
           type="password"
           name="password"
           value={formik.values.password}
@@ -84,8 +88,9 @@ const RegistrationForm = () => {
       </div>
 
       <div>
-        <label>Confirm Password</label>
+        <label className={css.form}>Confirm Password</label>
         <input
+          className={css.input}
           type="password"
           name="confirmPassword"
           value={formik.values.confirmPassword}
@@ -96,7 +101,9 @@ const RegistrationForm = () => {
         )}
       </div>
 
-      <button type="submit">Register</button>
+      <button className={css.btn} type="submit">
+        Register
+      </button>
     </form>
   );
 };

@@ -1,12 +1,12 @@
 //src/pages/LoginPage.jsx
 import React from 'react';
-import LoginForm from '../../components/LoginForm/LoginForm'; // Импортируем компонент формы
+import LoginForm from '../../components/LoginForm/LoginForm'; 
 
 const LoginPage = () => {
   return (
     <div>
       <h1>Login</h1>
-      <LoginForm />  {/* Здесь рендерим компонент формы */}
+      <LoginForm />  
     </div>
   );
 };

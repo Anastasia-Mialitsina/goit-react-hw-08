@@ -1,12 +1,27 @@
 // src/components/Navigation.jsx
 import React from "react";
 import { Link } from "react-router-dom";
+import css from "./Navigation.module.css";
 
 const Navigation = () => {
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/contacts">Contacts</Link>
+    <nav className={css.nav}>
+      <Link
+        to="/"
+        className={({ isActive }) =>
+          isActive ? `${css.link} ${css.active}` : css.link
+        }
+      >
+        Home
+      </Link>
+      <Link
+        to="/contacts"
+        className={({ isActive }) =>
+          isActive ? `${css.link} ${css.active}` : css.link
+        }
+      >
+        Contacts
+      </Link>
     </nav>
   );
 };

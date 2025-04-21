@@ -2,7 +2,8 @@
 import React from "react";
 import { useFormik } from "formik";
 import { useDispatch } from "react-redux";
-import { logIn } from "../../redux/auth/operations"; // Операция логина
+import { logIn } from "../../redux/auth/operations"; 
+import css from './LoginForm.module.css';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -13,15 +14,18 @@ const LoginForm = () => {
       password: "",
     },
     onSubmit: (values) => {
-      dispatch(logIn(values)); // Отправляем данные в Redux
+      dispatch(logIn(values));
     },
   });
 
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form className={css.form} onSubmit={formik.handleSubmit}>
       <div>
-        <label htmlFor="email">Email</label>
+        <label className={css.form} htmlFor="email">
+          Email
+        </label>
         <input
+          className={css.input}
           id="email"
           type="email"
           name="email"
@@ -30,8 +34,11 @@ const LoginForm = () => {
         />
       </div>
       <div>
-        <label htmlFor="password">Password</label>
+        <label className={css.form} htmlFor="password">
+          Password
+        </label>
         <input
+          className={css.input}
           id="password"
           type="password"
           name="password"
@@ -39,7 +46,9 @@ const LoginForm = () => {
           onChange={formik.handleChange}
         />
       </div>
-      <button type="submit">Login</button>
+      <button className={css.btn} type="submit">
+        Login
+      </button>
     </form>
   );
 };

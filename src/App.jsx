@@ -9,13 +9,13 @@ import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import ContactsPage from "./pages/ContactsPage/ContactsPage";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute"; 
-import RestrictedRoute from "./components/RestrictedRoute/RestrictedRoute"; // Ограниченный маршрут
+import RestrictedRoute from "./components/RestrictedRoute/RestrictedRoute"; 
 
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(refreshUser()); // Проверка и восстановление авторизации при монтировании
+    dispatch(refreshUser());
   }, [dispatch]);
 
   return (

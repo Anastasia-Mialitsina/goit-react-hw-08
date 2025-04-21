@@ -1,0 +1,9 @@
+.appBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  box-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--hover-glow);
+  border-bottom: 2px solid var(--main-color);
+}

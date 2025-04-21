@@ -19,7 +19,7 @@ import style from "./ContactList.module.css";
     dispatch(deleteContact(id));
   };
   
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader />;
   if (error) return <p>Error: {error}</p>;
 
   return (

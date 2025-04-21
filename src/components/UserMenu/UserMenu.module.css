@@ -1,0 +1,24 @@
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.email {
+  font-weight: bold;
+  color: var(--main-color);
+}
+.logoutBtn {
+  color: var(--main-color);
+  border-radius: var(--radius);
+  cursor: pointer;
+  border: 2px solid var(--main-color);
+  background-color: transparent;
+  padding: 10px;
+  font-size: 16px;
+  box-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--hover-glow);
+  transition: transform var(--transition), border-color var(--transition);
+}
+.logoutBtn:hover {
+  transform: scale(1.05);
+  border-color: #ff6b6b;
+}

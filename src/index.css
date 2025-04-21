@@ -74,3 +74,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+:root {
+  --main-color: #e85353;
+  --glow-color: #eb0404;
+  --hover-glow: #ff6b6b;
+  --radius: 40px;
+  --transition: 0.3s ease;
+}

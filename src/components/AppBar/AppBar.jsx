@@ -4,16 +4,17 @@ import { useSelector } from "react-redux";
 import Navigation from "../Navigation/Navigation";
 import AuthNav from "../AuthNav/AuthNav";
 import UserMenu from "../UserMenu/UserMenu";
-import { selectIsLoggedIn } from "../../redux/auth/selectors"; // Импортируем селектор для проверки логина
+import { selectIsLoggedIn } from "../../redux/auth/selectors"; 
+import css from './AppBar.module.css';
 
 const AppBar = () => {
-  const isLoggedIn = useSelector(selectIsLoggedIn); // Получаем статус авторизации пользователя
+  const isLoggedIn = useSelector(selectIsLoggedIn); 
 
   return (
-    <header>
+    <header className={css.appBar}>
       <Navigation />
       {isLoggedIn ? <UserMenu /> : <AuthNav />}{" "}
-      {/* Отображаем компоненты в зависимости от статуса авторизации */}
+
     </header>
   );
 };

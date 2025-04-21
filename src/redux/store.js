@@ -12,8 +12,8 @@ import {
 } from "redux-persist";
 
 import { authReducer } from "./auth/slice";
-import contactsReducer from "./contacts/slice"; // если ещё не подключён
-import filtersReducer from "./filters/slice"; // 🧩 вот он — импортируем
+import contactsReducer from "./contacts/slice"; 
+import filtersReducer from "./filters/slice"; 
 
 const authPersistConfig = {
   key: "auth",
@@ -25,7 +25,7 @@ export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
     contacts: contactsReducer,
-    filters: filtersReducer, // 💥 добавили сюда
+    filters: filtersReducer, 
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
