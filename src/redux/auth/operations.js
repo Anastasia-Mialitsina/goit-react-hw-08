@@ -6,10 +6,6 @@ export const API_URL = "https://connections-api.goit.global";
 
 axios.defaults.baseURL = API_URL;
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODA2NGMxNmM0OTVlZDZlMjVmNDBjZDAiLCJpYXQiOjE3NDUyNDMxNTh9.HK5UmX8WTObkZJpGe9bEFIrY227Y29tBRPjNCo_WYco";
-
-axios.defaults.headers.common.Authorization = `Bearer ${token}`;
-
 const setAuthHeader = (token) => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
@@ -65,7 +61,7 @@ export const refreshUser = createAsyncThunk(
 
     try {
       setAuthHeader(token);
-      const res = await axios.get("/contacts");
+      const res = await axios.get("/users/current");
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

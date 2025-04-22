@@ -7,5 +7,8 @@ const PrivateRoute = ({ children, redirectTo = "/" }) => {
   return isLoggedIn ? children : <Navigate to={redirectTo} />;
 };
 
+//const isRefreshing = useSelector((state) => state.auth.isRefreshing);
+//if (isRefreshing) return null;
+
 export default PrivateRoute;
 
