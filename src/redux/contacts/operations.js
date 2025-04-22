@@ -1,3 +1,4 @@
+// src/redux/contacts/operations.js
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { API_URL } from "../auth/operations";
@@ -23,5 +24,13 @@ export const deleteContact = createAsyncThunk(
   async (id) => {
     await axios.delete(`/contacts/${id}`);
     return id;
+  }
+);
+
+export const editContact = createAsyncThunk(
+  "contacts/editContact",
+  async ({ id, updatedContact }) => {
+    const response = await axios.patch(`/contacts/${id}`, updatedContact);
+    return response.data; 
   }
 );

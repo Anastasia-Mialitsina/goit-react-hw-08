@@ -9,14 +9,13 @@
   display: flex;
   justify-content: center;
   align-items: center;  
-
 }
 .contactItem {
   border: 2px solid #e85353;
   box-shadow: 0 0 10px #eb0404, 0 0 20px #ff6b6b;
   transition: transform 0.3sease, border-color 0.3sease;
   margin-top: 40px;
-  width: 200px;
+  width: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +46,6 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
-
 .deleteBtn:hover {
   background-color: #c0392b;
 }

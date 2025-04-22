@@ -1,0 +1,66 @@
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.modal {
+  background-color: rgba(14, 14, 14, 0.95);
+  border: 3px solid #e85353;
+  box-shadow: 0 0 15px #eb0404, 0 0 25px #ff6b6b;
+  padding: 30px;
+  width: 300px;
+  max-width: 90%;
+  margin: auto;
+  border-radius: 12px;
+  color: rgb(152, 6, 6);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  animation: fadeInScale 0.4s ease-in-out;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.deleteBtn {
+  background-color: rgb(152, 6, 6);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  font-weight: bold;
+}
+.deleteBtn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+.cancelBtn {
+  background-color: rgb(152, 6, 6);
+  color: white;
+  border: 2px solid rgb(152, 6, 6);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  font-weight: bold;
+}
+.cancelBtn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}

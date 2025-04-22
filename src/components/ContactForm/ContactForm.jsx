@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contacts/operations";
 import style from "./ContactForm.module.css";
+import { toast } from "react-hot-toast";  
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -13,7 +14,13 @@ const ContactForm = () => {
     e.preventDefault();
     if (!name || !number) return;
 
-    dispatch(addContact({ name, number }));
+    dispatch(addContact({ name, number }))
+      .then(() => {
+        toast.success("Контакт успешно добавлен!"); // Уведомление об успешном добавлении
+      })
+      .catch(() => {
+        toast.error("Ошибка при добавлении контакта!"); // Уведомление об ошибке
+      });
 
     setName("");
     setNumber("");
